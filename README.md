@@ -1,31 +1,94 @@
-# gestion-des-notes
-Application de gestion des notes des étudiants
 
-## Membres du groupe
-- AMENDAH
-- DAGBOVIE
-- KOGLENABA
-- SINFEYA
+## 📘 F5\_TTS\_Latest.ipynb
 
-## Objectif
-Nous souhaitons nous doter d'une application permettant de bien gérer les notes des étudiants d'ESGIS.
+**دفتر Jupyter لتوليد الصوت من النصوص باستخدام نموذج F5-TTS مفتوح المصدر.**
+يساعدك على تحويل الجمل المكتوبة (باللغة العربية أو غيرها) إلى ملفات صوتية بجودة عالية.
 
-## Travail demandé
-Il vous est demandé de mettre en place une application permettant de créer, modifier, afficher et supprimer les étudiants, les filières, les classes, ainsi que permettre de saisir les notes des étudiants. L'application doit permettre d'afficher le relevé de notes d'un étudiant en temps réel.
+---
 
-## Quoi utiliser ?
-Il est recommandé :
-- d'utiliser Framework PHP pour faciliter le développement;
-- une base de données MySQL;
-- des requêtes AJAX pour dynamiser le site.
+## 🧠 الميزات
 
-## Technologies
-On utilisera donc PHP, MySQL et AJAX. Ce dernier servant ici pour dynamiser le site web et envoyer des requêtes asynchrones au serveur web.
+* 🔊 تحويل نصوص إلى كلام بصوت بشري طبيعي.
+* 🌐 يدعم اللغة العربية (أو لغات أخرى حسب النموذج المستخدم).
+* 📁 حفظ النتيجة كملف صوتي `.wav`.
+* 🎯 مناسب للتجارب، المشاريع التعليمية أو بناء مساعد صوتي.
 
-## Comment obtenir l'aide
-Chaque groupe est composé de 4 personnes (en général). Les étudiants sont invités à travailler de manière collaborative (ce qui ne signifie pas de laisser une seule personne travailler). Au moindre souci, l'étudiant n'hésitera pas à créer un [ticket (issue)](https://github.com/Classroom-Koffi-Sani/gestion-des-notes/issues) dans le projet. S'il y  a besoin, identifier un collaborateur (par exemple @koffisani) afin qu'il soit notifié de ce ticket.
+---
 
-## Comment valider son projet
-Les étudiants sont appelés à travailler avec Git et Github. Ils doivent s'appuyer sur les notions vues en classes mais aussi des nombreuses ressources disponibles en ligne afin de **créer leur propre branche vers laquelle pousser leur travail personnel**. Cela signifie que chaque étudiant aura sa propre branche, contenant son travail.
+## 🚀 المتطلبات
 
-Le travail à rendre doit comporter tous les fichiers nécessaires à la prise en main du projet, essentiellement le code source et le script de la base de données.
+قبل البدء، تأكد من أنك تملك:
+
+* Python 3.8 أو أحدث
+* بيئة Jupyter أو Google Colab
+* GPU (موصى به لتسريع توليد الصوت)
+
+### 📦 الحزم المستخدمة:
+
+```bash
+torch
+torchaudio
+transformers
+IPython.display
+```
+
+> سيتم تثبيت باقي الحزم تلقائيًا داخل الخلية الأولى من الدفتر.
+
+---
+
+## 🛠️ طريقة الاستخدام
+
+1. **فتح الدفتر**:
+
+   * محليًا باستخدام Jupyter Notebook
+   * أو على Google Colab: [افتح على Colab](https://colab.research.google.com)
+
+2. **تشغيل الخلايا خطوة بخطوة**:
+
+   * الأولى: تثبيت المتطلبات
+   * الثانية: تحميل النموذج (F5-TTS)
+   * الثالثة: إدخال النص المراد تحويله
+   * الرابعة: توليد الصوت وعرضه أو تحميله
+
+3. **تخصيص الصوت**:
+
+   * يمكنك تغيير الإعدادات مثل:
+
+     * سرعة الصوت
+     * نوع الصوت (حسب النموذج)
+     * حفظ الملف باسم معين
+
+---
+
+## 🧪 مثال سريع:
+
+```python
+text = "مرحبا بكم في تجربة تحويل النص إلى كلام"
+generate_speech(text, output_path="voice.wav")
+```
+
+---
+
+## 📁 المخرجات
+
+* يتم إنشاء ملف `voice.wav` في نفس المجلد.
+* يمكن تشغيله مباشرة داخل الدفتر أو تحميله إلى جهازك.
+
+---
+
+## 🧩 ملاحظات
+
+* يدعم النموذج مدخلات طويلة لكن يفضل تقسيم النص الطويل إلى جمل.
+* النموذج قد يحتاج إلى إنترنت عند أول تشغيل لتحميل الملفات.
+* للحصول على صوت عربي واضح، تأكد أن النموذج المُستخدم مدرب على بيانات عربية.
+
+---
+
+## 🤝 الشكر
+
+تم استخدام نموذج **F5-TTS** من مجتمع المصادر المفتوحة.
+لمزيد من التفاصيل، راجع: [https://github.com/f5ai/f5-tts](https://github.com/f5ai/f5-tts)
+
+---
+
+
